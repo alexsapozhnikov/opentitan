@@ -2,8 +2,8 @@
 // Licensed under the Apache License, Version 2.0, see LICENSE for details.
 // SPDX-License-Identifier: Apache-2.0
 
-class edn_genbits_vseq extends edn_base_vseq;
-  `uvm_object_utils(edn_genbits_vseq)
+class edn_firm_vseq extends edn_base_vseq;
+  `uvm_object_utils(edn_firm_vseq)
 
   `uvm_object_new
 
@@ -49,7 +49,12 @@ class edn_genbits_vseq extends edn_base_vseq;
 
     // Expect/Clear interrupt bit
     csr_spinwait(.ptr(ral.intr_state.edn_cmd_req_done), .exp_data(1'b1));
+    `uvm_info(`gfn, $sformatf("edn_cmd_req_done = %0d", ral.intr_state.edn_cmd_req_done), UVM_LOW)
+    `uvm_info(`gfn, "Intr genbits", UVM_LOW)
     check_interrupts(.interrupts((1 << CmdReqDone)), .check_set(1'b1));
+    csr_spinwait(.ptr(ral.ctrl.edn_enable), .exp_data(4'b1010));
+    csr_spinwait(.ptr(ral.sw_cmd_sts), .exp_data(2'b01));
+    csr_spinwait(.ptr(ral.sw_cmd_req), .exp_data(32'h0));
   endtask
 
 endclass

@@ -23,6 +23,9 @@ filesets:
       - seq_lib/edn_common_vseq.sv: {is_include_file: true}
       - seq_lib/edn_smoke_vseq.sv: {is_include_file: true}
       - seq_lib/edn_genbits_vseq.sv: {is_include_file: true}
+      - seq_lib/edn_trans_vseq.sv: {is_include_file: true}
+      - seq_lib/edn_auto_req_vseq.sv: {is_include_file: true}
+      - seq_lib/edn_firm_vseq.sv: {is_include_file: true}
     file_type: systemVerilogSource
 
 generate:

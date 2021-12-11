@@ -6,3 +6,6 @@
 `include "edn_common_vseq.sv"
 `include "edn_smoke_vseq.sv"
 `include "edn_genbits_vseq.sv"
+`include "edn_trans_vseq.sv"
+`include "edn_auto_req_vseq.sv"
+`include "edn_firm_vseq.sv"

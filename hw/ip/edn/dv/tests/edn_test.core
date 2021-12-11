@@ -13,6 +13,9 @@ filesets:
       - edn_base_test.sv: {is_include_file: true}
       - edn_smoke_test.sv: {is_include_file: true}
       - edn_genbits_test.sv: {is_include_file: true}
+      - edn_trans_test.sv: {is_include_file: true}
+      - edn_auto_req_test.sv: {is_include_file: true}
+      - edn_firm_test.sv: {is_include_file: true}
     file_type: systemVerilogSource
 
 targets:

@@ -2,9 +2,9 @@
 // Licensed under the Apache License, Version 2.0, see LICENSE for details.
 // SPDX-License-Identifier: Apache-2.0
 
-class edn_genbits_test extends edn_base_test;
+class edn_firm_test extends edn_base_test;
 
-  `uvm_component_utils(edn_genbits_test)
+  `uvm_component_utils(edn_firm_test)
   `uvm_component_new
 
   function void configure_env();
@@ -15,4 +15,4 @@ class edn_genbits_test extends edn_base_test;
     `DV_CHECK_RANDOMIZE_FATAL(cfg)
     `uvm_info(`gfn, $sformatf("%s", cfg.convert2string()), UVM_HIGH)
   endfunction
-endclass : edn_genbits_test
+endclass : edn_firm_test

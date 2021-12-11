@@ -58,6 +58,27 @@
       uvm_test_seq: edn_genbits_vseq
     }
 
+    {
+      name: edn_trans
+      uvm_test: edn_trans_test
+      uvm_test_seq: edn_trans_vseq
+    }
+
+
+    {
+      name: edn_auto_req
+      uvm_test: edn_auto_req_test
+      uvm_test_seq: edn_auto_req_vseq
+    }
+
+    {
+      name: edn_firm
+      uvm_test: edn_firm_test
+      uvm_test_seq: edn_firm_vseq
+    }
+
+
+
     // TODO: add more tests here
   ]
 
